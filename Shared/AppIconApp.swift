@@ -10,8 +10,15 @@ import SwiftUI
 @main
 struct AppIconApp: App {
     var body: some Scene {
-        DocumentGroup(newDocument: AppIconDocument()) { file in
-            ContentView(document: file.$document)
+        WindowGroup {
+            AppIconView()
+        }
+    }
+    
+    var docScene: some Scene {
+        DocumentGroup(newDocument: { AppIconDocument() }) { config in
+            AppIconView()
+                .environmentObject(config.document)
         }
     }
 }

@@ -5,14 +5,31 @@
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeIconFile</key>
+			<string> </string>
+			<key>CFBundleTypeName</key>
+			<string>AppIcons</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
 			<key>LSItemContentTypes</key>
 			<array>
-				<string>com.example.plain-text</string>
+				<string>com.kfxfy.uitools.appicons</string>
 			</array>
 			<key>NSUbiquitousDocumentUserActivityType</key>
 			<string>$(PRODUCT_BUNDLE_IDENTIFIER).example-document</string>
+		</dict>
+	</array>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeDescription</key>
+			<string> </string>
+			<key>UTTypeIcons</key>
+			<dict/>
+			<key>UTTypeTagSpecification</key>
+			<dict/>
 		</dict>
 	</array>
 	<key>UTImportedTypeDeclarations</key>

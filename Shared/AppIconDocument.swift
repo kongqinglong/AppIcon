@@ -9,21 +9,22 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 extension UTType {
-    static var exampleText: UTType {
-        UTType(importedAs: "com.example.plain-text")
+    static var appIcons: UTType {
+        UTType(importedAs: "com.kfxfy.uitools.appicons")
     }
 }
 
-struct AppIconDocument: FileDocument {
-    var text: String
+class AppIconDocument: ReferenceFileDocument {
+    
+    @Published  var text: String = ""
 
-    init(text: String = "Hello, world!") {
-        self.text = text
+    static var readableContentTypes: [UTType] { [.appIcons] }
+    static var writableContentTypes: [UTType] { [.appIcons] }    
+
+    init() {        
     }
-
-    static var readableContentTypes: [UTType] { [.exampleText] }
-
-    init(configuration: ReadConfiguration) throws {
+    
+    required init(configuration: ReadConfiguration) throws {
         guard let data = configuration.file.regularFileContents,
               let string = String(data: data, encoding: .utf8)
         else {
@@ -32,8 +33,17 @@ struct AppIconDocument: FileDocument {
         text = string
     }
     
-    func fileWrapper(configuration: WriteConfiguration) throws -> FileWrapper {
+//    func fileWrapper(configuration: WriteConfiguration) throws -> FileWrapper {
+//        let data = text.data(using: .utf8)!
+//        return .init(regularFileWithContents: data)
+//    }
+
+    func fileWrapper(snapshot: Data, configuration: WriteConfiguration) throws -> FileWrapper {
         let data = text.data(using: .utf8)!
         return .init(regularFileWithContents: data)
+    }
+
+    func snapshot(contentType: UTType) throws -> Data {
+        return text.data(using: .utf8)!
     }
 }

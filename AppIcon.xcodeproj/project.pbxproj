@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F915213527CCA1E5002EDE23 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F915213427CCA1E5002EDE23 /* Sidebar.swift */; };
+		F915213627CCA1E5002EDE23 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F915213427CCA1E5002EDE23 /* Sidebar.swift */; };
+		F915213827CCB11F002EDE23 /* View+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F915213727CCB11F002EDE23 /* View+UIImage.swift */; };
+		F915213927CCB11F002EDE23 /* View+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F915213727CCB11F002EDE23 /* View+UIImage.swift */; };
+		F915213B27CCF378002EDE23 /* AppIconSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F915213A27CCF378002EDE23 /* AppIconSet.swift */; };
+		F915213C27CCF378002EDE23 /* AppIconSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F915213A27CCF378002EDE23 /* AppIconSet.swift */; };
 		F9DC7BF327BDE6A10040D8C5 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC7BF227BDE6A10040D8C5 /* Tests_iOS.swift */; };
 		F9DC7BF527BDE6A10040D8C5 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC7BF427BDE6A10040D8C5 /* Tests_iOSLaunchTests.swift */; };
 		F9DC7BFF27BDE6A10040D8C5 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC7BFE27BDE6A10040D8C5 /* Tests_macOS.swift */; };
@@ -15,8 +21,8 @@
 		F9DC7C0327BDE6A10040D8C5 /* AppIconApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC7BD627BDE6A00040D8C5 /* AppIconApp.swift */; };
 		F9DC7C0427BDE6A10040D8C5 /* AppIconDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC7BD727BDE6A00040D8C5 /* AppIconDocument.swift */; };
 		F9DC7C0527BDE6A10040D8C5 /* AppIconDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC7BD727BDE6A00040D8C5 /* AppIconDocument.swift */; };
-		F9DC7C0627BDE6A10040D8C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC7BD827BDE6A00040D8C5 /* ContentView.swift */; };
-		F9DC7C0727BDE6A10040D8C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC7BD827BDE6A00040D8C5 /* ContentView.swift */; };
+		F9DC7C0627BDE6A10040D8C5 /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC7BD827BDE6A00040D8C5 /* AppIconView.swift */; };
+		F9DC7C0727BDE6A10040D8C5 /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC7BD827BDE6A00040D8C5 /* AppIconView.swift */; };
 		F9DC7C0827BDE6A10040D8C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9DC7BD927BDE6A10040D8C5 /* Assets.xcassets */; };
 		F9DC7C0927BDE6A10040D8C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9DC7BD927BDE6A10040D8C5 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -39,9 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F915213427CCA1E5002EDE23 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
+		F915213727CCB11F002EDE23 /* View+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+UIImage.swift"; sourceTree = "<group>"; };
+		F915213A27CCF378002EDE23 /* AppIconSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconSet.swift; sourceTree = "<group>"; };
 		F9DC7BD627BDE6A00040D8C5 /* AppIconApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconApp.swift; sourceTree = "<group>"; };
 		F9DC7BD727BDE6A00040D8C5 /* AppIconDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconDocument.swift; sourceTree = "<group>"; };
-		F9DC7BD827BDE6A00040D8C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F9DC7BD827BDE6A00040D8C5 /* AppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconView.swift; sourceTree = "<group>"; };
 		F9DC7BD927BDE6A10040D8C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9DC7BDE27BDE6A10040D8C5 /* AppIcon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppIcon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9DC7BE127BDE6A10040D8C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,7 +114,10 @@
 			children = (
 				F9DC7BD627BDE6A00040D8C5 /* AppIconApp.swift */,
 				F9DC7BD727BDE6A00040D8C5 /* AppIconDocument.swift */,
-				F9DC7BD827BDE6A00040D8C5 /* ContentView.swift */,
+				F915213427CCA1E5002EDE23 /* Sidebar.swift */,
+				F9DC7BD827BDE6A00040D8C5 /* AppIconView.swift */,
+				F915213A27CCF378002EDE23 /* AppIconSet.swift */,
+				F915213727CCB11F002EDE23 /* View+UIImage.swift */,
 				F9DC7BD927BDE6A10040D8C5 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -316,8 +328,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9DC7C0227BDE6A10040D8C5 /* AppIconApp.swift in Sources */,
+				F915213827CCB11F002EDE23 /* View+UIImage.swift in Sources */,
 				F9DC7C0427BDE6A10040D8C5 /* AppIconDocument.swift in Sources */,
-				F9DC7C0627BDE6A10040D8C5 /* ContentView.swift in Sources */,
+				F915213527CCA1E5002EDE23 /* Sidebar.swift in Sources */,
+				F9DC7C0627BDE6A10040D8C5 /* AppIconView.swift in Sources */,
+				F915213B27CCF378002EDE23 /* AppIconSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,8 +341,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9DC7C0327BDE6A10040D8C5 /* AppIconApp.swift in Sources */,
+				F915213927CCB11F002EDE23 /* View+UIImage.swift in Sources */,
 				F9DC7C0527BDE6A10040D8C5 /* AppIconDocument.swift in Sources */,
-				F9DC7C0727BDE6A10040D8C5 /* ContentView.swift in Sources */,
+				F915213627CCA1E5002EDE23 /* Sidebar.swift in Sources */,
+				F9DC7C0727BDE6A10040D8C5 /* AppIconView.swift in Sources */,
+				F915213C27CCF378002EDE23 /* AppIconSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
