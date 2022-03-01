@@ -42,6 +42,10 @@ extension View {
 
 extension NSImage {
     
+    /// 缩放图像的几种方法：https://nshipster.com/image-resizing/
+    /// https://www.hackingwithswift.com/read/27/3/drawing-into-a-core-graphics-context-with-uigraphicsimagerenderer
+    /// https://augmentedcode.io/2020/10/25/resizing-uiimages-with-aspect-scale-to-fill-on-ios/
+    /// 
     func resize(newSize: CGSize) -> NSImage? {
         guard let bitmapRep = NSBitmapImageRep(
             bitmapDataPlanes: nil, pixelsWide: Int(newSize.width), pixelsHigh: Int(newSize.height),

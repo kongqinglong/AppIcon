@@ -17,6 +17,14 @@
 		F9A4954127CDE7DE00C3E80F /* NSView+NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A4953F27CDE7DE00C3E80F /* NSView+NSImage.swift */; };
 		F9A4954327CDE82D00C3E80F /* UIView+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A4954227CDE82D00C3E80F /* UIView+UIImage.swift */; };
 		F9A4954427CDE82D00C3E80F /* UIView+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A4954227CDE82D00C3E80F /* UIView+UIImage.swift */; };
+		F9A4954A27CE0BE600C3E80F /* FolderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A4954927CE0BE600C3E80F /* FolderImageView.swift */; };
+		F9A4954B27CE0BE600C3E80F /* FolderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A4954927CE0BE600C3E80F /* FolderImageView.swift */; };
+		F9A4954C27CE0BE600C3E80F /* FolderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A4954927CE0BE600C3E80F /* FolderImageView.swift */; };
+		F9A4954D27CE0BE600C3E80F /* FolderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A4954927CE0BE600C3E80F /* FolderImageView.swift */; };
+		F9A4954F27CE0C2100C3E80F /* IconSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A4954E27CE0C2100C3E80F /* IconSetView.swift */; };
+		F9A4955027CE0C2100C3E80F /* IconSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A4954E27CE0C2100C3E80F /* IconSetView.swift */; };
+		F9A4955127CE0C2100C3E80F /* IconSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A4954E27CE0C2100C3E80F /* IconSetView.swift */; };
+		F9A4955227CE0C2100C3E80F /* IconSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A4954E27CE0C2100C3E80F /* IconSetView.swift */; };
 		F9DC7BF327BDE6A10040D8C5 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC7BF227BDE6A10040D8C5 /* Tests_iOS.swift */; };
 		F9DC7BF527BDE6A10040D8C5 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC7BF427BDE6A10040D8C5 /* Tests_iOSLaunchTests.swift */; };
 		F9DC7BFF27BDE6A10040D8C5 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC7BFE27BDE6A10040D8C5 /* Tests_macOS.swift */; };
@@ -54,6 +62,8 @@
 		F915213A27CCF378002EDE23 /* AppIconSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconSet.swift; sourceTree = "<group>"; };
 		F9A4953F27CDE7DE00C3E80F /* NSView+NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+NSImage.swift"; sourceTree = "<group>"; };
 		F9A4954227CDE82D00C3E80F /* UIView+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UIImage.swift"; sourceTree = "<group>"; };
+		F9A4954927CE0BE600C3E80F /* FolderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderImageView.swift; sourceTree = "<group>"; };
+		F9A4954E27CE0C2100C3E80F /* IconSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSetView.swift; sourceTree = "<group>"; };
 		F9DC7BD627BDE6A00040D8C5 /* AppIconApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconApp.swift; sourceTree = "<group>"; };
 		F9DC7BD727BDE6A00040D8C5 /* AppIconDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconDocument.swift; sourceTree = "<group>"; };
 		F9DC7BD827BDE6A00040D8C5 /* AppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconView.swift; sourceTree = "<group>"; };
@@ -122,6 +132,8 @@
 				F9DC7BD727BDE6A00040D8C5 /* AppIconDocument.swift */,
 				F915213427CCA1E5002EDE23 /* Sidebar.swift */,
 				F9DC7BD827BDE6A00040D8C5 /* AppIconView.swift */,
+				F9A4954E27CE0C2100C3E80F /* IconSetView.swift */,
+				F9A4954927CE0BE600C3E80F /* FolderImageView.swift */,
 				F915213A27CCF378002EDE23 /* AppIconSet.swift */,
 				F915213727CCB11F002EDE23 /* View+UIImage.swift */,
 				F9DC7BD927BDE6A10040D8C5 /* Assets.xcassets */,
@@ -337,10 +349,12 @@
 			files = (
 				F9DC7C0227BDE6A10040D8C5 /* AppIconApp.swift in Sources */,
 				F9A4954327CDE82D00C3E80F /* UIView+UIImage.swift in Sources */,
+				F9A4954A27CE0BE600C3E80F /* FolderImageView.swift in Sources */,
 				F915213827CCB11F002EDE23 /* View+UIImage.swift in Sources */,
 				F9DC7C0427BDE6A10040D8C5 /* AppIconDocument.swift in Sources */,
 				F915213527CCA1E5002EDE23 /* Sidebar.swift in Sources */,
 				F9DC7C0627BDE6A10040D8C5 /* AppIconView.swift in Sources */,
+				F9A4954F27CE0C2100C3E80F /* IconSetView.swift in Sources */,
 				F915213B27CCF378002EDE23 /* AppIconSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,10 +365,12 @@
 			files = (
 				F9DC7C0327BDE6A10040D8C5 /* AppIconApp.swift in Sources */,
 				F915213927CCB11F002EDE23 /* View+UIImage.swift in Sources */,
+				F9A4954B27CE0BE600C3E80F /* FolderImageView.swift in Sources */,
 				F9DC7C0527BDE6A10040D8C5 /* AppIconDocument.swift in Sources */,
 				F915213627CCA1E5002EDE23 /* Sidebar.swift in Sources */,
 				F9DC7C0727BDE6A10040D8C5 /* AppIconView.swift in Sources */,
 				F9A4954027CDE7DE00C3E80F /* NSView+NSImage.swift in Sources */,
+				F9A4955027CE0C2100C3E80F /* IconSetView.swift in Sources */,
 				F915213C27CCF378002EDE23 /* AppIconSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +381,8 @@
 			files = (
 				F9A4954427CDE82D00C3E80F /* UIView+UIImage.swift in Sources */,
 				F9DC7BF527BDE6A10040D8C5 /* Tests_iOSLaunchTests.swift in Sources */,
+				F9A4955127CE0C2100C3E80F /* IconSetView.swift in Sources */,
+				F9A4954C27CE0BE600C3E80F /* FolderImageView.swift in Sources */,
 				F9DC7BF327BDE6A10040D8C5 /* Tests_iOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +393,8 @@
 			files = (
 				F9A4954127CDE7DE00C3E80F /* NSView+NSImage.swift in Sources */,
 				F9DC7C0127BDE6A10040D8C5 /* Tests_macOSLaunchTests.swift in Sources */,
+				F9A4955227CE0C2100C3E80F /* IconSetView.swift in Sources */,
+				F9A4954D27CE0BE600C3E80F /* FolderImageView.swift in Sources */,
 				F9DC7BFF27BDE6A10040D8C5 /* Tests_macOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
