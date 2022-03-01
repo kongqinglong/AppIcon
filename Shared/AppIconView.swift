@@ -9,7 +9,8 @@ import SwiftUI
 
 struct AppIconView: View {
     //@EnvironmentObject var document: AppIconDocument
-    @State var fileName: String = ""
+    @AppStorage("\(Self.self)_fileName")
+    var fileName: String = ""
     
     var body: some View {
         NavigationView {
@@ -21,7 +22,7 @@ struct AppIconView: View {
                     TextField("AppIcon文件名", text: $fileName)
                         .frame(width: 220)
 
-                    Button(action: {}) {
+                    Button(action: {saveIcon()}) {
                         Label { Text("保存为AppIcon") }
                         icon: {
                             Image(systemName: "pencil.tip.crop.circle.badge.plus")
@@ -135,7 +136,14 @@ extension AppIconView {
             }
         }
         
+        for iconSet in AppIconSet.allIcons {
+            let url = appIconDir.appendingPathComponent("\(fileName)_app_icon_\(iconSet.fileName)")
+            _ = imageView.saveAsImage(url: url, newSize: iconSet.size)
+        }
+        
     }
+    
+    
 }
 #endif //#if os(macOS)
 

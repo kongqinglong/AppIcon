@@ -14,9 +14,10 @@ struct AppIconSet {
     let scale: Int
     
     init(idiom: String,  edge: CGFloat, scale: Int) {
+        let dim = edge * CGFloat(scale)
         self.idiom = idiom
-        self.fileName = "\(edge)x\(edge)@\(scale)x.png"
-        self.size = CGSize(width: edge, height: edge)
+        self.fileName = String(format: "%gx%g@%dx.png", edge, edge, scale)
+        self.size = CGSize(width: dim, height: dim)
         self.scale = scale
     }
     

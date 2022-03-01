@@ -24,11 +24,10 @@ extension View {
     func saveAsImage(url: URL, imageType: NSBitmapImageRep.FileType = .png, newSize: CGSize? = nil) -> Bool {
         let nsView = NoInsetHostingView(rootView: self)
         nsView.setFrameSize(nsView.fittingSize)
-
+        
         let bitmapRep = nsView.bitmapImageRepForCachingDisplay(in: nsView.bounds)!
         bitmapRep.size = nsView.bounds.size
         nsView.cacheDisplay(in: nsView.bounds, to: bitmapRep)
-        
         if newSize == nil || newSize == bitmapRep.size {
             let data = bitmapRep.representation(using: imageType, properties: [:])
             do {
@@ -41,6 +40,7 @@ extension View {
         } else {
             guard let cgImage = bitmapRep.cgImage else {return false}
             let nsImage = NSImage(cgImage: cgImage, size: bitmapRep.size)
+            
             guard let image = nsImage.resize(newSize: newSize!) else {return false}
             return image.save(url: url)
         }
