@@ -141,6 +141,8 @@ extension AppIconView {
             _ = imageView.saveAsImage(url: url, newSize: iconSet.size)
         }
         
+        NSWorkspace.shared.selectFile(nil, inFileViewerRootedAtPath: appIconDir.path)
+
     }
     
     

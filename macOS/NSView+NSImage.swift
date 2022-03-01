@@ -28,19 +28,12 @@ extension View {
         let bitmapRep = nsView.bitmapImageRepForCachingDisplay(in: nsView.bounds)!
         bitmapRep.size = nsView.bounds.size
         nsView.cacheDisplay(in: nsView.bounds, to: bitmapRep)
-        if newSize == nil || newSize == bitmapRep.size {
-            let data = bitmapRep.representation(using: imageType, properties: [:])
-            do {
-                try data?.write(to: url)
-                return true
-            } catch {
-                print("write to \(url.lastPathComponent) error: \(error.localizedDescription)")
-                return false
-            }
+        
+        guard let cgImage = bitmapRep.cgImage else {return false}
+        let nsImage = NSImage(cgImage: cgImage, size: bitmapRep.size)
+        if newSize == nil {
+            return nsImage.save(url: url)
         } else {
-            guard let cgImage = bitmapRep.cgImage else {return false}
-            let nsImage = NSImage(cgImage: cgImage, size: bitmapRep.size)
-            
             guard let image = nsImage.resize(newSize: newSize!) else {return false}
             return image.save(url: url)
         }
