@@ -5,7 +5,7 @@
 //  Created by kongqinglong on 2022/2/28.
 //
 
-import Foundation
+import SwiftUI
 
 struct AppIconSet {
     let idiom: String

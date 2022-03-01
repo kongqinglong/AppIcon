@@ -13,6 +13,10 @@
 		F915213927CCB11F002EDE23 /* View+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F915213727CCB11F002EDE23 /* View+UIImage.swift */; };
 		F915213B27CCF378002EDE23 /* AppIconSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F915213A27CCF378002EDE23 /* AppIconSet.swift */; };
 		F915213C27CCF378002EDE23 /* AppIconSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F915213A27CCF378002EDE23 /* AppIconSet.swift */; };
+		F9A4954027CDE7DE00C3E80F /* NSView+NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A4953F27CDE7DE00C3E80F /* NSView+NSImage.swift */; };
+		F9A4954127CDE7DE00C3E80F /* NSView+NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A4953F27CDE7DE00C3E80F /* NSView+NSImage.swift */; };
+		F9A4954327CDE82D00C3E80F /* UIView+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A4954227CDE82D00C3E80F /* UIView+UIImage.swift */; };
+		F9A4954427CDE82D00C3E80F /* UIView+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A4954227CDE82D00C3E80F /* UIView+UIImage.swift */; };
 		F9DC7BF327BDE6A10040D8C5 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC7BF227BDE6A10040D8C5 /* Tests_iOS.swift */; };
 		F9DC7BF527BDE6A10040D8C5 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC7BF427BDE6A10040D8C5 /* Tests_iOSLaunchTests.swift */; };
 		F9DC7BFF27BDE6A10040D8C5 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC7BFE27BDE6A10040D8C5 /* Tests_macOS.swift */; };
@@ -48,6 +52,8 @@
 		F915213427CCA1E5002EDE23 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
 		F915213727CCB11F002EDE23 /* View+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+UIImage.swift"; sourceTree = "<group>"; };
 		F915213A27CCF378002EDE23 /* AppIconSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconSet.swift; sourceTree = "<group>"; };
+		F9A4953F27CDE7DE00C3E80F /* NSView+NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+NSImage.swift"; sourceTree = "<group>"; };
+		F9A4954227CDE82D00C3E80F /* UIView+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UIImage.swift"; sourceTree = "<group>"; };
 		F9DC7BD627BDE6A00040D8C5 /* AppIconApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconApp.swift; sourceTree = "<group>"; };
 		F9DC7BD727BDE6A00040D8C5 /* AppIconDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconDocument.swift; sourceTree = "<group>"; };
 		F9DC7BD827BDE6A00040D8C5 /* AppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconView.swift; sourceTree = "<group>"; };
@@ -138,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				F9DC7BE127BDE6A10040D8C5 /* Info.plist */,
+				F9A4954227CDE82D00C3E80F /* UIView+UIImage.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -147,6 +154,7 @@
 			children = (
 				F9DC7BE827BDE6A10040D8C5 /* Info.plist */,
 				F9DC7BE927BDE6A10040D8C5 /* macOS.entitlements */,
+				F9A4953F27CDE7DE00C3E80F /* NSView+NSImage.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -328,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9DC7C0227BDE6A10040D8C5 /* AppIconApp.swift in Sources */,
+				F9A4954327CDE82D00C3E80F /* UIView+UIImage.swift in Sources */,
 				F915213827CCB11F002EDE23 /* View+UIImage.swift in Sources */,
 				F9DC7C0427BDE6A10040D8C5 /* AppIconDocument.swift in Sources */,
 				F915213527CCA1E5002EDE23 /* Sidebar.swift in Sources */,
@@ -345,6 +354,7 @@
 				F9DC7C0527BDE6A10040D8C5 /* AppIconDocument.swift in Sources */,
 				F915213627CCA1E5002EDE23 /* Sidebar.swift in Sources */,
 				F9DC7C0727BDE6A10040D8C5 /* AppIconView.swift in Sources */,
+				F9A4954027CDE7DE00C3E80F /* NSView+NSImage.swift in Sources */,
 				F915213C27CCF378002EDE23 /* AppIconSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9A4954427CDE82D00C3E80F /* UIView+UIImage.swift in Sources */,
 				F9DC7BF527BDE6A10040D8C5 /* Tests_iOSLaunchTests.swift in Sources */,
 				F9DC7BF327BDE6A10040D8C5 /* Tests_iOS.swift in Sources */,
 			);
@@ -362,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9A4954127CDE7DE00C3E80F /* NSView+NSImage.swift in Sources */,
 				F9DC7C0127BDE6A10040D8C5 /* Tests_macOSLaunchTests.swift in Sources */,
 				F9DC7BFF27BDE6A10040D8C5 /* Tests_macOS.swift in Sources */,
 			);
