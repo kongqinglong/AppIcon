@@ -43,7 +43,7 @@ struct IconSetView: View {
                 let rect = CGRect(origin: .zero, size: size)
                 let path = Path(roundedRect: rect, cornerRadius: 45)
                 
-                let gradient = Gradient(colors: [.blue, .cyan])
+                let gradient = Gradient(colors: [.blue, .mint])
                 let from = rect.origin
                 let to =   CGPoint(x: from.x + rect.width, y: from.y + rect.height)
                 
@@ -54,16 +54,15 @@ struct IconSetView: View {
                 context.fill(path, with: .linearGradient(gradient, startPoint: from, endPoint: to))
                 
                 // cloud
-                let cloudRect = CGRect(x: rect.width*0.11, y: rect.height*0.1, width: rect.width*0.8, height: rect.height*0.8)
+                let cloudRect = CGRect(x: rect.width*0.16, y: rect.height*0.2, width: rect.width*0.7, height: rect.height*0.6)
                 var cloudImage = context.resolve(Image(systemName: "book"))
                 cloudImage.shading = GraphicsContext.Shading.color(.white)
-                //cloudImage.shading = .linearGradient(Gradient(colors: [.white, .purple]), startPoint: cloudRect.origin, endPoint: cloudRect.end)
                 context.draw(cloudImage, in: cloudRect, style: FillStyle())
                 
                 // music
                 var musicImage = context.resolve(Image(systemName: "music.note.list"))
                 musicImage.shading = GraphicsContext.Shading.color(.white)
-                let imageRect = CGRect(x: rect.width*0.19, y: rect.height*0.37, width: rect.width*0.25, height: rect.height*0.3)
+                let imageRect = CGRect(x: rect.width*0.24, y: rect.height*0.34, width: rect.width*0.2, height: rect.height*0.3)
                 
                 context.draw(musicImage, in: imageRect, style: FillStyle())
             }
