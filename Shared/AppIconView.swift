@@ -66,7 +66,7 @@ extension AppIconView {
     ///
     func saveIcon() {
         guard !fileName.isEmpty else {return}
-        let appIconDir = Self.documentDirectory.appendingPathComponent(fileName)
+        let appIconDir = Self.documentDirectory.appendingPathComponent("\(fileName).appiconset")
         if !FileManager.default.fileExists(atPath: appIconDir.path) {
             do {
                 try FileManager.default.createDirectory(at: appIconDir, withIntermediateDirectories: true, attributes: nil)
@@ -75,10 +75,24 @@ extension AppIconView {
                 return
             }
         }
+
+        var images: [AppIconItem] = []
+
+        AppIconSet.prefix = fileName
+        for iconSet in AppIconItem.allIcons {
+            let url = appIconDir.appendingPathComponent(iconSet.fullname)
+            if  imageView.saveAsImage(url: url, newSize: iconSet.pixelSize ) {
+                images.append(iconSet)
+            }
+        }
         
-        for iconSet in AppIconSet.allIcons {
-            let url = appIconDir.appendingPathComponent("\(fileName)_\(iconSet.idiom)_app_icon_\(iconSet.fileName)")
-            _ = imageView.saveAsImage(url: url, newSize: iconSet.size)
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = [.sortedKeys, .prettyPrinted]
+        let iconSet = AppIconSet(images: images)
+        if let data = try? encoder.encode(iconSet), let contents = String(data: data, encoding: .utf8) {
+            print("contents: \n \(contents)")
+            let contentsURL = appIconDir.appendingPathComponent(AppIconSet.contents)
+            try? data.write(to: contentsURL)
         }
         
         NSWorkspace.shared.selectFile(nil, inFileViewerRootedAtPath: appIconDir.path)
@@ -113,3 +127,4 @@ extension CGRect {
         CGPoint(x: minX + width, y: minY + height)
     }
 }
+
